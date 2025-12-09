@@ -26,9 +26,9 @@
 | 04  | 🔏 RDBMS / The Anatomy Of A Table Or Relation         |
 | 05  | 🔏 Kegs In Databases: Super Key                       |
 | 06  | 🔏 Candidate Kegs, Subsets & Proper Subsets Explained |
-| 07  | 🔏 coming soon ...                                    |
+| 07  | 🔏 Primary, Alternate, Simple And Composite Keys      |
 | 08  | 🔏 Foreign Keys Explained                             |
-| 09  | 🔏 coming soon ...                                    |
-| 10  | 🔏 coming soon ...                                    |
+| 09  | 🔏 Database Design Process: Step-By-Step              |
+| 10  | 🔏 Relationship Cardinality And ER Diagrams           |
 
 ---
