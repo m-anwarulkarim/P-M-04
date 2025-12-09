@@ -18,17 +18,17 @@
 
 ### 📚 Topics Covered
 
-| No. | Topic                               |
-| --- | ----------------------------------- |
-| 01  | 🔏 Database And Data Vs Information |
-| 02  | 🔏 Why File Systems Fail            |
-| 03  | 🔏 Types Of Database Models         |
-| 04  | 🔏 coming soon ...                  |
-| 05  | 🔏 coming soon ...                  |
-| 06  | 🔏 coming soon ...                  |
-| 07  | 🔏 coming soon ...                  |
-| 08  | 🔏 Foreign Keys Explained           |
-| 09  | 🔏 coming soon ...                  |
-| 10  | 🔏 coming soon ...                  |
+| No. | Topic                                                 |
+| --- | ----------------------------------------------------- |
+| 01  | 🔏 Database And Data Vs Information                   |
+| 02  | 🔏 Why File Systems Fail                              |
+| 03  | 🔏 Types Of Database Models                           |
+| 04  | 🔏 RDBMS / The Anatomy Of A Table Or Relation         |
+| 05  | 🔏 Kegs In Databases: Super Key                       |
+| 06  | 🔏 Candidate Kegs, Subsets & Proper Subsets Explained |
+| 07  | 🔏 coming soon ...                                    |
+| 08  | 🔏 Foreign Keys Explained                             |
+| 09  | 🔏 coming soon ...                                    |
+| 10  | 🔏 coming soon ...                                    |
 
 ---
