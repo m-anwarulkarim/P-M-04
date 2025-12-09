@@ -10,7 +10,7 @@
  *
  * Definition:
  * Candidate Key হলো একটি Column বা Column-এর combination,
- * যা প্রতিটি Row ইউনিকভাবে চিহ্নিত করতে পারে।
+ * যা প্রতিটি Row ইউনিকভাবে চিহ্নিত করতে পারে। তবে কোনো Column বাদ দিলে আর ইউনিক থাকবে না
  * এটি হলো Super Key-এর মধ্যে minimal অংশ।
  * অর্থাৎ, যতটুকু Column দরকার Row ইউনিক করতে, সেটিই Candidate Key।
  * কোন অতিরিক্ত Column থাকবে না।

@@ -1,6 +1,6 @@
 # 🚀 Mission - 04
 
-## RDBMS Rockstar
+## RDBMS (Relational Database Management System) Rockstar
 
 ---
 
@@ -27,7 +27,7 @@
 | 05  | 🔏 coming soon ...                  |
 | 06  | 🔏 coming soon ...                  |
 | 07  | 🔏 coming soon ...                  |
-| 08  | 🔏 coming soon ...                  |
+| 08  | 🔏 Foreign Keys Explained           |
 | 09  | 🔏 coming soon ...                  |
 | 10  | 🔏 coming soon ...                  |
 
