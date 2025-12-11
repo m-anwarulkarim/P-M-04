@@ -49,7 +49,7 @@
 | 08  | 🔏 What is PostgreSQL?                                 | [View](./module-16/C-8.ts)         |
 | 09  | 🔏 Install PostgreSQL & Explore psql CLI               | [View](./module-16/C-9.ts)         |
 | 10  | 🔏 Some Postgres Commands - Add psql to PATH           | [View](./module-16/C-10.ts)        |
-| 10  | 🔏 Some Postgres Commands - Add psql to PATH           | [View](./module-16/mainCommend.ts) |
+| 10  | 🔏 all necessary commend for SQl                       | [View](./module-16/mainCommend.ts) |
 
 ---
 
