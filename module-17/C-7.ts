@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * PostgreSQL Column Constraints Example (Bangla Comments)
+ * PostgreSQL Column Constraints
  * ============================================================
  * এই ফাইলে PostgreSQL-এর Column Constraints গুলো উদাহরণসহ
  * comment হিসেবে ব্যাখ্যা করা হয়েছে।

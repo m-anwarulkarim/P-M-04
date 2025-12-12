@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * PostgreSQL SQL Commands Example (Bangla Comments)
+ * PostgreSQL SQL Commands
  * ============================================================
  * এই ফাইলটিতে database এবং table সংক্রান্ত SQL commands
  * step by step ব্যাখ্যা করা হয়েছে।

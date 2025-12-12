@@ -1,6 +1,6 @@
 /*
 ==================================================
-pgAdmin Basics & Usage Guide (Bangla)
+pgAdmin Basics & Usage Guide 
 ==================================================
 
 1️⃣ pgAdmin কী?
