@@ -81,18 +81,18 @@
 
 ### 📚 Topics Covered
 
-| No. | Topic             | Link                        |
-| --- | ----------------- | --------------------------- |
-| 01  | 🔏 Coming soon... | [View](./module-18/C-1.ts)  |
-| 02  | 🔏 Coming soon... | [View](./module-18/C-2.ts)  |
-| 03  | 🔏 Coming soon... | [View](./module-18/C-3.ts)  |
-| 04  | 🔏 Coming soon... | [View](./module-18/C-4.ts)  |
-| 05  | 🔏 Coming soon... | [View](./module-18/C-5.ts)  |
-| 06  | 🔏 Coming soon... | [View](./module-18/C-6.ts)  |
-| 07  | 🔏 Coming soon... | [View](./module-18/C-7.ts)  |
-| 08  | 🔏 Coming soon... | [View](./module-18/C-8.ts)  |
-| 09  | 🔏 Coming soon... | [View](./module-18/C-9.ts)  |
-| 10  | 🔏 Coming soon... | [View](./module-18/C-10.ts) |
+| No. | Topic                                        | Link                        |
+| --- | -------------------------------------------- | --------------------------- |
+| 01  | 🔏 ALTER Table & Constraints                 | [View](./module-18/C-1.ts)  |
+| 02  | 🔏 ALTER Default Values & Column Constraints | [View](./module-18/C-2.ts)  |
+| 03  | 🔏 SELECT Basics: Sorting & Aliases          | [View](./module-18/C-3.ts)  |
+| 04  | 🔏 DISTINCT & WHERE Filtering                | [View](./module-18/C-4.ts)  |
+| 05  | 🔏 Filtering with AND & OR                   | [View](./module-18/C-5.ts)  |
+| 06  | 🔏 Comparison, BETWEEN & IN                  | [View](./module-18/C-6.ts)  |
+| 07  | 🔏 LIKE vs ILIKE                             | [View](./module-18/C-7.ts)  |
+| 08  | 🔏 NOT & Scalar Functions                    | [View](./module-18/C-8.ts)  |
+| 09  | 🔏 Aggregate Functions Explained             | [View](./module-18/C-9.ts)  |
+| 10  | 🔏 Coming soon...                            | [View](./module-18/C-10.ts) |
 
 ---
 
