@@ -35,18 +35,20 @@ Common operators:
 Query Examples:
 
 1) Age > 25
-SELECT name, age FROM users WHERE age > 25;
+*/
+`SELECT name, age FROM users WHERE age > 25`;
 
-Result:
-| name  | age |
-|-------|-----|
-| Karim | 30  |
-| Sumit | 30  |
-| Rafiq | 28  |
+// Result:
+// | name  | age |
+// |-------|-----|
+// | Karim | 30  |
+// | Sumit | 30  |
+// | Rafiq | 28  |
 
-2) Age != 30
-SELECT name, age FROM users WHERE age != 30;
+// 2) Age != 30
 
+`SELECT name, age FROM users WHERE age != 30;`;
+/*
 Result:
 | name    | age |
 |---------|-----|
@@ -60,17 +62,19 @@ Result:
 2) BETWEEN – Value Range Filter
 ------------------------------------------------------------
 Syntax:
-SELECT column1, column2
+*/
+`SELECT column1, column2
 FROM table_name
-WHERE column_name BETWEEN value1 AND value2;
-
+WHERE column_name BETWEEN value1 AND value2`;
+/*
 ব্যাখ্যা:
 - value1 থেকে value2 এর মধ্যে থাকা row select হয়
 - Inclusive, মানে value1 এবং value2 ও include হয়
 
 Example:
-SELECT name, age FROM users WHERE age BETWEEN 25 AND 30;
-
+*/
+`SELECT name, age FROM users WHERE age BETWEEN 25 AND 30`;
+/*
 Result:
 | name    | age |
 |---------|-----|
@@ -85,17 +89,19 @@ Result:
 3) IN – Multiple value এর মধ্যে থাকা row select করা
 ------------------------------------------------------------
 Syntax:
-SELECT column1, column2
+*/
+`SELECT column1, column2
 FROM table_name
-WHERE column_name IN (value1, value2, ...);
-
+WHERE column_name IN (value1, value2, ...)`;
+/*
 ব্যাখ্যা:
 - Column এর value যদি provided list এর মধ্যে থাকে, row select হবে
 - অনেক value একসাথে check করতে সুবিধা
 
 Example:
-SELECT name, city FROM users WHERE city IN ('Dhaka', 'Khulna');
-
+*/
+`SELECT name, city FROM users WHERE city IN ('Dhaka', 'Khulna')`;
+/*
 Result:
 | name    | city  |
 |---------|-------|
@@ -110,28 +116,30 @@ Result:
 4) NOT IN – List এর বাইরে থাকা row select করা
 ------------------------------------------------------------
 Syntax:
-SELECT column1
-FROM table_name
-WHERE column_name NOT IN (value1, value2, ...);
-
-Example:
-SELECT name, city FROM users WHERE city NOT IN ('Dhaka', 'Khulna');
-
-Result:
-| name  | city      |
-|-------|-----------|
-| Karim | Chittagong|
 */
+`SELECT column1
+FROM table_name
+WHERE column_name NOT IN (value1, value2, ...)`;
+
+// Example:
+`SELECT name, city FROM users WHERE city NOT IN ('Dhaka', 'Khulna')`;
+
+// Result:
+// | name  | city      |
+// |-------|-----------|
+// | Karim | Chittagong|
+// */
 
 /*
 ------------------------------------------------------------
 5) Comparison + AND/OR Combination
 ------------------------------------------------------------
 Example:
-SELECT name, age, city
+*/
+`SELECT name, age, city
 FROM users
-WHERE age BETWEEN 25 AND 30 AND city IN ('Dhaka', 'Khulna');
-
+WHERE age BETWEEN 25 AND 30 AND city IN ('Dhaka', 'Khulna')`;
+/*
 Result:
 | name    | age | city  |
 |---------|-----|-------|

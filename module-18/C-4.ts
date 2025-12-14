@@ -13,9 +13,10 @@ PostgreSQL SELECT – DISTINCT & WHERE Filtering (Bangla)
 1) DISTINCT – Duplicate Row Remove করা
 ------------------------------------------------------------
 Syntax:
-SELECT DISTINCT column1, column2, ...
-FROM table_name;
-
+*/
+`SELECT DISTINCT column1, column2, ...
+FROM table_name;`;
+/*
 ব্যাখ্যা:
 - একই column value এর duplicate row output থেকে remove হয়
 - একাধিক column দিতে পারি: combination অনুযায়ী unique row বের হয়
@@ -30,8 +31,10 @@ FROM table_name;
 | 5  | Rafiq   | 28  |
 
 Query:
-SELECT DISTINCT age FROM users;
-
+*/
+`SELECT DISTINCT age FROM users;
+`;
+/*
 Result:
 | age |
 |-----|
@@ -40,8 +43,9 @@ Result:
 | 28  |
 
 Multiple column DISTINCT:
-SELECT DISTINCT name, age FROM users;
-
+*/
+`SELECT DISTINCT name, age FROM users;`;
+/*
 Result:
 | name    | age |
 |---------|-----|
@@ -77,8 +81,9 @@ WHERE condition;
 Query Examples:
 
 1) Single condition:
-SELECT name, age FROM users WHERE age > 25;
-
+*/
+`SELECT name, age FROM users WHERE age > 25;`;
+/*
 Result:
 | name   | age |
 |--------|-----|
@@ -95,25 +100,26 @@ Result:
 | Sumit| 30  |
 
 3) Multiple condition (OR):
-SELECT name, age FROM users WHERE age < 23 OR age = 30;
-
-Result:
-| name    | age |
-|---------|-----|
-| Karim   | 30  |
-| Abdullah| 22  |
-| Sumit   | 30  |
-
-4) NOT condition:
-SELECT name, age FROM users WHERE NOT age = 30;
-
-Result:
-| name    | age |
-|---------|-----|
-| Anwarul | 25  |
-| Abdullah| 22  |
-| Rafiq   | 28  |
 */
+("SELECT name, age FROM users WHERE age < 23 OR age = 30");
+
+// Result:
+// | name    | age |
+// |---------|-----|
+// | Karim   | 30  |
+// | Abdullah| 22  |
+// | Sumit   | 30  |
+
+// 4) NOT condition:
+`SELECT name, age FROM users WHERE NOT age = 30;`;
+
+// Result:
+// | name    | age |
+// |---------|-----|
+// | Anwarul | 25  |
+// | Abdullah| 22  |
+// | Rafiq   | 28  |
+// */
 
 /*
 ------------------------------------------------------------

@@ -12,10 +12,11 @@ AND ও OR logical operators ব্যবহার করে multiple condition 
 1) AND – সব condition সত্য হতে হবে
 ------------------------------------------------------------
 Syntax:
-SELECT column1, column2, ...
+*/
+`SELECT column1, column2, ...
 FROM table_name
-WHERE condition1 AND condition2;
-
+WHERE condition1 AND condition2`;
+/*
 ব্যাখ্যা:
 - শুধু সেই row select হবে যেখানে সব condition true
 - একাধিক condition যোগ করতে হলে AND ব্যবহার করা হয়
@@ -30,10 +31,11 @@ WHERE condition1 AND condition2;
 | 5  | Rafiq   | 28  | Khulna    |
 
 Query:
-SELECT name, age, city
+*/
+`SELECT name, age, city
 FROM users
-WHERE age >= 25 AND city = 'Dhaka';
-
+WHERE age >= 25 AND city = 'Dhaka'`;
+/*
 Result:
 | name    | age | city  |
 |---------|-----|-------|
@@ -46,19 +48,21 @@ Result:
 2) OR – যেকোনো condition সত্য হলে row select হবে
 ------------------------------------------------------------
 Syntax:
-SELECT column1, column2, ...
+*/
+`SELECT column1, column2, ...
 FROM table_name
-WHERE condition1 OR condition2;
-
+WHERE condition1 OR condition2`;
+/*
 ব্যাখ্যা:
 - একটির condition true হলে row select হবে
 - OR use করে multiple possibilities cover করা যায়
 
 Query:
-SELECT name, age, city
+*/
+`SELECT name, age, city
 FROM users
-WHERE age < 25 OR city = 'Khulna';
-
+WHERE age < 25 OR city = 'Khulna'`;
+/*
 Result:
 | name    | age | city  |
 |---------|-----|-------|
@@ -71,19 +75,21 @@ Result:
 3) AND + OR Combination
 ------------------------------------------------------------
 Syntax:
-SELECT column1, column2
+*/
+`SELECT column1, column2
 FROM table_name
-WHERE (condition1 AND condition2) OR condition3;
-
+WHERE (condition1 AND condition2) OR condition3`;
+/*
 ব্যাখ্যা:
 - Parentheses দিয়ে precedence ঠিক করা যায়
 - প্রথমে AND evaluate হবে, তারপর OR
 
 Query:
-SELECT name, age, city
+*/
+`SELECT name, age, city
 FROM users
-WHERE (age = 30 AND city = 'Dhaka') OR( age = 28 AND city = 'khulna');
-
+WHERE (age = 30 AND city = 'Dhaka') OR( age = 28 AND city = 'khulna')`;
+/*
 Result:
 | name  | age | city  |
 |-------|-----|-------|
@@ -96,15 +102,16 @@ Result:
 4) NOT – Condition invert করা
 ------------------------------------------------------------
 Syntax:
-SELECT column1, column2
+*/
+`SELECT column1, column2
 FROM table_name
-WHERE NOT condition;
+WHERE NOT condition`;
 
-Example:
-SELECT name, age, city
+// Example:
+`SELECT name, age, city
 FROM users
-WHERE NOT city = 'Dhaka';
-
+WHERE NOT city = 'Dhaka'`;
+/*
 Result:
 | name  | age | city      |
 |-------|-----|-----------|
