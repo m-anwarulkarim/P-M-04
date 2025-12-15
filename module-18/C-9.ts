@@ -1,263 +1,105 @@
 /**
 ============================================================
-PostgreSQL – NOT Operator & Scalar Functions
+PostgreSQL – Aggregate Functions (Bangla Explanation)
 ============================================================
 */
 
 /*
-------------------------------------------------------------
-SECTION 1: NOT Operator কী এবং কেন ব্যবহার করা হয়
-------------------------------------------------------------
-
-NOT হলো একটি Logical Operator।
-এটি মূলত কোনো শর্তের বিপরীত ফলাফল বের করার জন্য ব্যবহার করা হয়।
-
-সহজ ভাষায় বলতে গেলে:
-যদি কোনো condition সত্য হয়, NOT সেটিকে মিথ্যা বানিয়ে দেয়।
-আর যদি কোনো condition মিথ্যা হয়, NOT সেটিকে সত্য বানিয়ে দেয়।
-
-NOT সাধারণত WHERE clause এর ভিতরে ব্যবহার করা হয়।
-এটি filtering এর সময় অনেক গুরুত্বপূর্ণ ভূমিকা রাখে।
-*/
-
-/*
-------------------------------------------------------------
-NOT Operator এর সাধারণ উদাহরণ
-------------------------------------------------------------
-
-ধরা যাক আমাদের একটি users নামের টেবিল আছে।
-টেবিলের কলামগুলো হলো id, name, is_active।
-
-এখন আমরা এমন সব user দেখতে চাই যারা active নয়।
-
-SQL Example:
-*/
-`SELECT * FROM users WHERE NOT is_active`;
-/*
-
-এখানে কী হচ্ছে:
-- is_active যদি true হয়, NOT সেটিকে false বানাবে
-- is_active যদি false হয়, NOT সেটিকে true বানাবে
-- ফলে শুধু inactive user গুলোই result এ আসবে
-*/
-
-/*
-------------------------------------------------------------
-NOT এর সাথে Comparison Operator ব্যবহার
-------------------------------------------------------------
-
-ধরা যাক আমরা এমন user চাই না যাদের বয়স ১৮ এর কম।
-
-SQL Example:
-*/
-`SELECT * FROM users WHERE NOT age < 18`;
-/*
-
-এখানে ব্যাখ্যা:
-- age < 18 মানে বয়স ১৮ এর নিচে
-- NOT age < 18 মানে বয়স ১৮ বা তার বেশি
-
-এই condition টি age >= 18 এর সমান ফলাফল দেয়,
-কিন্তু এখানে NOT ব্যবহার করে বিষয়টি বোঝানো হয়েছে।
-*/
-
-/*
-------------------------------------------------------------
-NOT এর সাথে IN ব্যবহার
-------------------------------------------------------------
-
-ধরা যাক আমাদের একটি orders টেবিল আছে।
-আমরা এমন order দেখতে চাই না যেগুলোর status হলো cancelled অথবা returned।
-
-SQL Example:
-*/
-`SELECT * FROM orders
-WHERE status NOT IN ('cancelled', 'returned')`;
-
-/*
-এখানে ব্যাখ্যা:
-- IN সাধারণত নির্দিষ্ট কিছু value এর সাথে match করে
-- NOT IN মানে এই value গুলোর কোনোটাই হবে না
-- ফলে active বা completed order গুলোই আসবে
-*/
-
-/*
-------------------------------------------------------------
-NOT এর সাথে NULL চেক করা
-------------------------------------------------------------
-
-অনেক সময় ডাটাবেজে NULL value থাকে।
-NULL মানে হলো value এখনো দেওয়া হয়নি।
-
-যদি আমরা এমন record চাই যেখানে email দেওয়া আছে:
-
-SQL Example:
-*/
-`SELECT * FROM users WHERE email IS NOT NULL`;
-/*
-এখানে ব্যাখ্যা:
-- IS NULL মানে value নেই
-- IS NOT NULL মানে value অবশ্যই আছে
-- NULL এর ক্ষেত্রে সমান বা অসমান operator কাজ করে না
-*/
-
-/*
 ============================================================
-SECTION 2: Scalar Function কী
+SECTION 1: Aggregate Functions কী
+------------------------------------------------------------
+
+Aggregate Functions হলো SQL Function যা একাধিক row এর উপর কাজ করে
+এবং একটি একক মান (single value) return করে।
+এগুলো সাধারণত report, summary বা data analysis এর জন্য ব্যবহৃত হয়।
+
+মূল বৈশিষ্ট্য:
+- একাধিক row input হিসেবে নেয়
+- single output produce করে
+- সাধারণত SELECT statement ও GROUP BY clause এর সাথে ব্যবহার হয়
+*/
+
+/*
+------------------------------------------------------------
+SECTION 2: প্রধান Aggregate Functions
+------------------------------------------------------------
+
+1) COUNT():
+----------------
+- row এর সংখ্যা return করে
+- সব row বা নির্দিষ্ট condition অনুযায়ী count করা যায়
+
+উদাহরণ:
+*/
+`SELECT COUNT(*) FROM users`;
+
+`SELECT COUNT(*) FROM users WHERE is_active = true`;
+
+// 2) SUM():
+// ----------------
+// - numeric column এর মোট যোগফল return করে
+
+// উদাহরণ:
+`SELECT SUM(balance) FROM accounts`;
+`SELECT SUM(quantity) FROM orders WHERE status = 'completed'`;
+
+// 3) AVG():
+// ----------------
+// - numeric column এর গড় (average) return করে
+
+// উদাহরণ:
+`SELECT AVG(price) FROM products`;
+`SELECT AVG(age) FROM users WHERE is_active = true`;
+
+// 4) MAX():
+// ----------------
+// - column এর সর্বোচ্চ মান return করে
+
+// উদাহরণ:
+`SELECT MAX(salary) FROM employees`;
+`SELECT MAX(created_at) FROM orders`;
+
+// 5) MIN():
+// ----------------
+// - column এর সর্বনিম্ন মান return করে
+
+// উদাহরণ:
+`SELECT MIN(price) FROM products`;
+`SELECT MIN(age) FROM users`;
+
+/*
+------------------------------------------------------------
+SECTION 3: GROUP BY এর সাথে ব্যবহার
+------------------------------------------------------------
+
+Aggregate Functions প্রায়ই GROUP BY এর সাথে ব্যবহার করা হয়, যাতে group-wise summary পাওয়া যায়।
+
+উদাহরণ:
+*/
+`SELECT department, COUNT(*) FROM employees GROUP BY department`;
+`SELECT department, AVG(salary) FROM employees GROUP BY department`;
+
+/*
+------------------------------------------------------------
+SECTION 4: HAVING Clause এর সাথে ব্যবহার
+------------------------------------------------------------
+
+HAVING clause ব্যবহার করে আমরা group-wise result filter করতে পারি।
+WHERE clause group-wise filter করতে পারে না, তাই HAVING ব্যবহৃত হয়।
+
+উদাহরণ:
+*/
+`SELECT department, AVG(salary) FROM employees
+GROUP BY department
+HAVING AVG(salary) > 50000`;
+
+/*
+------------------------------------------------------------
+SECTION 5: Additional Notes
+------------------------------------------------------------
+- COUNT(*) সব row গননা করে
+- COUNT(column_name) শুধুমাত্র non-NULL value গননা করে
+- SUM, AVG, MAX, MIN শুধুমাত্র numeric column এর উপর কার্যকর
+- Aggregate Functions report, summary, analytics এবং decision making এ অপরিহার্য
 ============================================================
-
-Scalar Function হলো এমন function যেগুলো:
-- একটি input নেয়
-- একটি output দেয়
-- প্রতিটি row এর জন্য আলাদা আলাদা result তৈরি করে
-
-অর্থাৎ, একটি row ঢুকবে এবং একটি মান বের হবে।
-এগুলো সাধারণত SELECT statement এর ভিতরে ব্যবহার করা হয়।
 */
-
-/*
-------------------------------------------------------------
-Scalar Function এর ধরন
-------------------------------------------------------------
-
-PostgreSQL এ Scalar Function সাধারণত চার ধরনের হয়ে থাকে:
-
-1) String Scalar Function
-2) Numeric Scalar Function
-3) Date and Time Scalar Function
-4) Conversion Scalar Function
-*/
-
-/*
-------------------------------------------------------------
-String Scalar Function এর উদাহরণ
-------------------------------------------------------------
-
-UPPER Function:
-এই function string কে বড় হাতের অক্ষরে রূপান্তর করে।
-
-SQL Example:
-*/
-`SELECT UPPER(name) FROM users`;
-
-// এখানে ব্যাখ্যা:
-// - প্রতিটি user এর name নেওয়া হবে
-// - name এর সব অক্ষর uppercase করা হবে
-// - প্রতিটি row এর জন্য আলাদা output আসবে
-// */
-
-/*
-------------------------------------------------------------
-LOWER Function
-------------------------------------------------------------
-
-LOWER function string কে ছোট হাতের অক্ষরে রূপান্তর করে।
-
-SQL Example:
-*/
-`SELECT LOWER(email) FROM users`;
-
-// এটি সাধারণত search বা comparison করার সময় কাজে লাগে।
-// */
-
-/*
-------------------------------------------------------------
-LENGTH Function
-------------------------------------------------------------
-
-LENGTH function string এর মোট character সংখ্যা বের করে।
-
-SQL Example:
-*/
-`SELECT LENGTH(name) FROM users`;
-/*
-
-এখানে প্রতিটি name এর দৈর্ঘ্য আলাদা আলাদা ভাবে দেখাবে।
-*/
-
-/*
-------------------------------------------------------------
-Numeric Scalar Function এর উদাহরণ
-------------------------------------------------------------
-
-ABS Function:
-এই function কোনো সংখ্যা যদি negative হয়,
-তাহলে সেটিকে positive করে দেয়।
-
-SQL Example:
-*/
-`SELECT ABS(balance) FROM accounts`;
-
-// - balance যদি -500 হয়, result হবে 500
-// - balance যদি 500 হয় , result থাকবে 500
-// */
-
-/*
-------------------------------------------------------------
-ROUND Function
-------------------------------------------------------------
-
-ROUND function দশমিক সংখ্যা গোল করে।
-
-SQL Example:
-*/
-`SELECT ROUND(price, 2) FROM products`;
-
-// এখানে ব্যাখ্যা:
-// - price এর দশমিকের পর দুই ঘর পর্যন্ত রাখা হবে
-// - এটি financial calculation এর জন্য খুব গুরুত্বপূর্ণ
-// */
-
-/*
-------------------------------------------------------------
-Date Scalar Function এর উদাহরণ
-------------------------------------------------------------
-
-NOW Function:
-এই function বর্তমান তারিখ এবং সময় দেয়।
-
-SQL Example:
-*/
-`SELECT NOW()`;
-
-// এটি সাধারণত created_at বা log time রাখার জন্য ব্যবহৃত হয়।
-// */
-
-/*
-------------------------------------------------------------
-EXTRACT Function
-------------------------------------------------------------
-
-EXTRACT function তারিখ থেকে নির্দিষ্ট অংশ বের করে।
-
-SQL Example:
-*/
-`SELECT EXTRACT(YEAR FROM created_at) FROM users`;
-
-// এখানে ব্যাখ্যা:
-// - created_at থেকে শুধু year অংশ বের করা হচ্ছে
-// - প্রতিটি row এর জন্য আলাদা year আসবে
-// */
-
-/*
-============================================================
-SECTION 3: NOT Operator এবং Scalar Function একসাথে ব্যবহার
-============================================================
-
-ধরা যাক আমরা এমন user চাই:
-- যাদের email ছোট হাতের অক্ষরে রূপান্তর করলে
-- তা কোনো নির্দিষ্ট domain দিয়ে শেষ হয় না
-
-SQL Example:
-*/
-`SELECT * FROM users
-WHERE NOT LOWER(email) LIKE '%gmail.com'`;
-
-// এখানে ব্যাখ্যা:
-// - LOWER function email কে ছোট হাতের অক্ষরে আনে
-// - LIKE দিয়ে domain মিলানো হয়
-// - NOT দিয়ে gmail.com বাদ দেওয়া হয়
-
-// এই ধরনের query বাস্তবে খুব বেশি ব্যবহার হয়।
-// ============================================================
-// */
