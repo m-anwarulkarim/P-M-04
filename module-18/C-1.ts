@@ -72,8 +72,10 @@ Notes:
  * 4) modifying type
  * ============================================================
  * -- modifying type
- * ALTER TABLE users
- * ALTER COLUMN name TYPE VARCHAR(50);
+ * */
+`ALTER TABLE users
+  ALTER COLUMN name TYPE VARCHAR(50)`;
+/*
  *
  * এখানে কি হচ্ছে:
  * 1. ALTER TABLE users → users টেবিলের ভিতর পরিবর্তন করা হবে।

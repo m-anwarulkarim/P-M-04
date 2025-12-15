@@ -11,15 +11,18 @@ LIKE বা ILIKE ব্যবহার করি। এগুলোর পা�
   অর্থাৎ, বড় অক্ষর এবং ছোট অক্ষর আলাদা মনে করা হয়।
 - সাধারণত pattern matching এর জন্য ব্যবহার হয়।
 - Pattern এ আমরা দুইটি wildcard ব্যবহার করতে পারি:
-    1) %  -> zero বা more character এর জন্য
-    2) _  -> একটি character এর জন্য
+    1) %  ব্যবহার করা হয় zero বা more character এর জন্য
+    2) _  ব্যবহার করা হয় একটি character এর জন্য
 
 উদাহরণ:
-SELECT * FROM users WHERE name LIKE 'An%';
+*/
+`SELECT * FROM users WHERE name LIKE 'An%'`;
+/*
 - এর মানে হলো, name "An" দিয়ে শুরু হওয়া সব record পাবে
 - "Anwar" পাবে, কিন্তু "anwar" পাবেনা (কারণ ছোট a case mismatch)
-
-SELECT * FROM users WHERE name LIKE '%war';
+*/
+`SELECT * FROM users WHERE name LIKE '%war'`;
+/*
 - name এর শেষের অংশ "war" হলে match হবে
 - "Anwar" হবে match, "anWar" হবে না
 
@@ -32,17 +35,18 @@ SELECT * FROM users WHERE name LIKE '%war';
   কিন্তু case match ঠিক গুরুত্বপূর্ণ নয়।
 
 উদাহরণ:
-SELECT * FROM users WHERE name ILIKE 'An%';
-- "Anwar", "anwar", "ANWAR" সব match হবে
+*/
+`SELECT * FROM users WHERE name ILIKE 'An%'`;
+// - "Anwar", "anwar", "ANWAR" সব match হবে
 
-SELECT * FROM users WHERE name ILIKE '%war';
-- "Anwar", "anWar", "anWAR" সব match হবে
+`SELECT * FROM users WHERE name ILIKE '%war'`;
+// - "Anwar", "anWar", "anWAR" সব match হবে
 
-3) মূল পার্থক্য:
-----------------
-- LIKE = Case-Sensitive
-- ILIKE = Case-Insensitive
-
+// 3) মূল পার্থক্য:
+// ----------------
+// - LIKE = Case-Sensitive
+// - ILIKE = Case-Insensitive
+/*
 4) Notes / ব্যবহার টিপস:
 ------------------------
 - ILIKE PostgreSQL-specific, অন্য RDBMS এ নাও থাকতে পারে।

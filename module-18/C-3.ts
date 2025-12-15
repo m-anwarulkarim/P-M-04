@@ -12,20 +12,21 @@ column/table aliases ব্যবহার করে output readable করা �
 1) ORDER BY – Sorting (Ascending / Descending)
 ------------------------------------------------------------
 Syntax:
-SELECT column1, column2
-FROM table_name
-ORDER BY column1 ASC|DESC;
-
-উদাহরণ:
-SELECT name, age FROM users ORDER BY age ASC;
-
-ব্যাখ্যা:
-- ASC → ascending (ছোট থেকে বড়)
-- DESC → descending (বড় থেকে ছোট)
-- Default ASC যদি ASC/DESC না দেয়া হয়
-- Multiple column sorting possible:
-SELECT name, age FROM users ORDER BY age DESC, name ASC;
 */
+`SELECT column1, column2
+FROM table_name
+ORDER BY column1 ASC|DESC`;
+
+// উদাহরণ:
+`SELECT name, age FROM users ORDER BY age ASC`;
+
+// ব্যাখ্যা:
+// - ASC → ascending (ছোট থেকে বড়)
+// - DESC → descending (বড় থেকে ছোট)
+// - Default ASC যদি ASC/DESC না দেয়া হয়
+// - Multiple column sorting possible:
+// SELECT name, age FROM users ORDER BY age DESC, name ASC;
+// */
 
 /*
 উদাহরণ Table: users
@@ -52,37 +53,40 @@ Query Result:
 2) Aliases – Column / Table নাম short/rename করা
 ------------------------------------------------------------
 Column Alias:
-SELECT column_name AS alias_name FROM table_name;
-Example:
-SELECT name AS username, age AS user_age FROM users;
+*/
+`SELECT column_name AS alias_name FROM table_name`;
+// Example:
+`SELECT name AS username, age AS user_age FROM users`;
 
-ব্যাখ্যা:
-- Output column name পরিবর্তন হবে
-- Database structure change হবে না
-- শুধু query output friendly করা হবে
+// ব্যাখ্যা:
+// - Output column name পরিবর্তন হবে
+// - Database structure change হবে না
+// - শুধু query output friendly করা হবে
 
-Table Alias:
-SELECT t1.column1, t2.column2
+// Table Alias:
+` SELECT t1.column1, t2.column2
 FROM table_name1 AS t1
 JOIN table_name2 AS t2
 ON t1.id = t2.user_id;
+`;
 
-ব্যাখ্যা:
-- Table short name দিয়ে query সহজ হয়
-- Multiple JOIN এ readability বৃদ্ধি পায়
-*/
+// ব্যাখ্যা:
+// - Table short name দিয়ে query সহজ হয়
+// - Multiple JOIN এ readability বৃদ্ধি পায়
+// */
 
 /*
 ------------------------------------------------------------
 3) SELECT JOIN + Aliases + Sorting Example
 ------------------------------------------------------------
 Query:
-SELECT u.name AS username, o.amount AS order_amount
+*/
+`SELECT u.name AS username, o.amount AS order_amount
 FROM users AS u
 INNER JOIN orders AS o
 ON u.id = o.user_id
-ORDER BY o.amount DESC;
-
+ORDER BY o.amount DESC`;
+/*
 Step-by-Step:
 1) SELECT u.name AS username, o.amount AS order_amount
    - Column rename হয়েছে শুধু output friendly করতে
@@ -117,11 +121,16 @@ Query Result:
 ------------------------------------------------------------
 4) Combination Example: Sorting + Aliases + Multiple Columns
 ------------------------------------------------------------
-SELECT u.name AS username, o.amount AS order_amount
+*/
+`SELECT u.name AS username, o.amount AS order_amount
 FROM users AS u
 INNER JOIN orders AS o
 ON u.id = o.user_id
-ORDER BY o.amount DESC, u.name ASC;
+ORDER BY o.amount DESC, u.name ASC`;
+/*
+Explanation:
+- একই query তে multiple column sorting করা হলো
+- প্রথমে amount DESC, তারপর name ASC   
 - Multiple column sorting + column aliases একসাথে ব্যবহার করা হলো
 - Output readable এবং organized
 */
