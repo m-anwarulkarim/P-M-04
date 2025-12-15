@@ -3,8 +3,8 @@
 PostgreSQL SELECT – DISTINCT & WHERE Filtering (Bangla)
 ------------------------------------------------------------
 এই অংশে আমরা দেখব:
-1) DISTINCT – duplicate row remove করা
-2) WHERE – row filter করা
+1) DISTINCT অর্থাৎ duplicate row remove করা
+2) WHERE অর্থাৎ  row filter করা
 ============================================================
 */
 
