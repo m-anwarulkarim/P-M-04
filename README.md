@@ -101,18 +101,20 @@
 
 ### 📚 Topics Covered
 
-| No. | Topic             | Link                        |
-| --- | ----------------- | --------------------------- |
-| 01  | 🔏 Coming soon... | [View](./module-19/C-1.ts)  |
-| 02  | 🔏 Coming soon... | [View](./module-19/C-2.ts)  |
-| 03  | 🔏 Coming soon... | [View](./module-19/C-3.ts)  |
-| 04  | 🔏 Coming soon... | [View](./module-19/C-4.ts)  |
-| 05  | 🔏 Coming soon... | [View](./module-19/C-5.ts)  |
-| 06  | 🔏 Coming soon... | [View](./module-19/C-6.ts)  |
-| 07  | 🔏 Coming soon... | [View](./module-19/C-7.ts)  |
-| 08  | 🔏 Coming soon... | [View](./module-19/C-8.ts)  |
-| 09  | 🔏 Coming soon... | [View](./module-19/C-9.ts)  |
-| 10  | 🔏 Coming soon... | [View](./module-19/C-10.ts) |
+| No. | Topic                                       | Link                        |
+| --- | ------------------------------------------- | --------------------------- |
+| 01  | 🔏 Handling NULL With COALESCE              | [View](./module-19/C-1.ts)  |
+| 02  | 🔏 LIMIT, OFFSET Pagination                 | [View](./module-19/C-2.ts)  |
+| 03  | 🔏 Updating Data                            | [View](./module-19/C-3.ts)  |
+| 04  | 🔏 Deleting Data                            | [View](./module-19/C-4.ts)  |
+| 05  | 🔏 GROUP BY Explained                       | [View](./module-19/C-5.ts)  |
+| 06  | 🔏 GROUP BY With HAVING                     | [View](./module-19/C-6.ts)  |
+| 07  | 🔏 Foreign Key Explained                    | [View](./module-19/C-7.ts)  |
+| 08  | 🔏 Adding Foreign Key Constraint            | [View](./module-19/C-8.ts)  |
+| 09  | 🔏 Understanding Inner Join                 | [View](./module-19/C-9.ts)  |
+| 10  | 🔏 Left Join Made Easy                      | [View](./module-19/C-10.ts) |
+| 11  | 🔏 11 Right & Full Join                     | [View](./module-19/C-11.ts) |
+| 12  | 🔏 All Joins Overview (Cross & Natural Too) | [View](./module-19/C-12.ts) |
 
 ---
 
