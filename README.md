@@ -60,18 +60,18 @@
 
 ### 📚 Topics Covered
 
-| No. | Topic                            | Link                        |
-| --- | -------------------------------- | --------------------------- |
-| 01  | 🔏 Intro to SQL                  | [View](./module-17/C-1.ts)  |
-| 02  | 🔏 pgAdmin Basics                | [View](./module-17/C-2.ts)  |
-| 03  | 🔏 Install Beekeeper Studio      | [View](./module-17/C-3.ts)  |
-| 04  | 🔏 Integer & Boolean Types       | [View](./module-17/C-4.ts)  |
-| 05  | 🔏 Character, Date & UUID Types  | [View](./module-17/C-5.ts)  |
-| 06  | 🔏 Create & Drop DB/Table        | [View](./module-17/C-6.ts)  |
-| 07  | 🔏 Column Constraints            | [View](./module-17/C-7.ts)  |
-| 08  | 🔏 Multiple Constraints & Insert | [View](./module-17/C-8.ts)  |
-| 09  | 🔏 CHECK Constraint              | [View](./module-17/C-9.ts)  |
-| 10  | 🔏 ......                        | [View](./module-17/C-10.ts) |
+| No. | Topic                                  | Link                        |
+| --- | -------------------------------------- | --------------------------- |
+| 01  | 🔏 Intro to SQL                        | [View](./module-17/C-1.ts)  |
+| 02  | 🔏 pgAdmin Basics                      | [View](./module-17/C-2.ts)  |
+| 03  | 🔏 Install Beekeeper Studio            | [View](./module-17/C-3.ts)  |
+| 04  | 🔏 Integer & Boolean Types             | [View](./module-17/C-4.ts)  |
+| 05  | 🔏 Character, Date & UUID Types        | [View](./module-17/C-5.ts)  |
+| 06  | 🔏 Create & Drop DB/Table              | [View](./module-17/C-6.ts)  |
+| 07  | 🔏 Column Constraints                  | [View](./module-17/C-7.ts)  |
+| 08  | 🔏 Multiple Constraints & Insert       | [View](./module-17/C-8.ts)  |
+| 09  | 🔏 CHECK Constraint                    | [View](./module-17/C-9.ts)  |
+| 10  | 🔏 DELETE vs DROP TABLE vs DROP COLUMN | [View](./module-17/C-10.ts) |
 
 ---
 
