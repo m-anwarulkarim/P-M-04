@@ -129,8 +129,8 @@
 | 01  | 🔏 USING          | [View](./module-20/C-1.ts)  |
 | 02  | 🔏 Coming soon... | [View](./module-20/C-2.ts)  |
 | 03  | 🔏 Coming soon... | [View](./module-20/C-3.ts)  |
-| 04  | 🔏 Coming soon... | [View](./module-20/C-4.ts)  |
-| 05  | 🔏 Coming soon... | [View](./module-20/C-5.ts)  |
+| 04  | 🔏 Subquery       | [View](./module-20/C-4.ts)  |
+| 05  | 🔏 Functions      | [View](./module-20/C-5.ts)  |
 | 06  | 🔏 Coming soon... | [View](./module-20/C-6.ts)  |
 | 07  | 🔏 Coming soon... | [View](./module-20/C-7.ts)  |
 | 08  | 🔏 Coming soon... | [View](./module-20/C-8.ts)  |
